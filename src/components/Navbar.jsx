@@ -32,9 +32,9 @@ export default function Navbar() {
       <div className="container flex justify-between items-center" style={{ position: 'relative' }}>
         <Link to="/" className="flex items-center gap-4 text-gradient" style={{ fontSize: '1.5rem', fontWeight: 800 }}>
           <GraduationCap size={32} color="var(--accent-cyan)" />
-          BeaSIte
+          BeaSite
         </Link>
-        
+
         {/* Desktop Nav */}
         <div className="nav-links desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           <Link to="/" className={isActive('/')}>Beranda</Link>
@@ -50,8 +50,8 @@ export default function Navbar() {
           <button onClick={toggleTheme} className="btn-icon" aria-label="Toggle Theme">
             {theme === 'dark' ? <Sun size={20} color="var(--text-primary)" /> : <Moon size={20} color="var(--text-primary)" />}
           </button>
-          <button 
-            className="btn btn-outline" 
+          <button
+            className="btn btn-outline"
             style={{ padding: '0.5rem', display: 'flex', color: 'var(--text-primary)' }}
             onClick={toggleMenu}
           >
@@ -83,14 +83,14 @@ export default function Navbar() {
         `}</style>
 
       </div>
-      
+
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-         <div className="mobile-menu" style={{ zIndex: 40 }}>
-           <Link to="/" onClick={toggleMenu} className={isActive('/')} style={{ fontSize: '1.1rem', fontWeight: 500 }}>Beranda</Link>
-           <Link to="/scholarships" onClick={toggleMenu} className={isActive('/scholarships')} style={{ fontSize: '1.1rem', fontWeight: 500 }}>Daftar Beasiswa</Link>
-           <Link to="/login" onClick={toggleMenu} className="btn btn-primary" style={{ color: 'white', textAlign: 'center', marginTop: '0.5rem' }}>Login</Link>
-         </div>
+        <div className="mobile-menu" style={{ zIndex: 40 }}>
+          <Link to="/" onClick={toggleMenu} className={isActive('/')} style={{ fontSize: '1.1rem', fontWeight: 500 }}>Beranda</Link>
+          <Link to="/scholarships" onClick={toggleMenu} className={isActive('/scholarships')} style={{ fontSize: '1.1rem', fontWeight: 500 }}>Daftar Beasiswa</Link>
+          <Link to="/login" onClick={toggleMenu} className="btn btn-primary" style={{ color: 'white', textAlign: 'center', marginTop: '0.5rem' }}>Login</Link>
+        </div>
       )}
     </nav>
   );
